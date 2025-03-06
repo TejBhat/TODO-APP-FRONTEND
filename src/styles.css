@@ -1,0 +1,92 @@
+/* Background Animation */
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Light Mode Background */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    transition: background 0.5s, color 0.5s;
+  }
+  
+  /* Dark Mode Background */
+  .dark-mode {
+    background: linear-gradient(-45deg, #232526, #414345, #1e1e1e, #0f0f0f);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    color: white;
+  }
+  
+  /* Todo Container */
+  .todo-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Dark Mode Todo Container */
+  .dark-mode .todo-container {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Todo Items */
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  /* Dark Mode Todo Items */
+  .dark-mode .todo-item {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    color: white;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  button:hover {
+    background: linear-gradient(45deg, #ff8e53, #ff6b6b);
+    transform: scale(1.05);
+  }
+  
+  /* Dark Mode Button */
+  .dark-mode button {
+    background: linear-gradient(45deg, #4a4a4a, #2c2c2c);
+  }
+  
+  .dark-mode button:hover {
+    background: linear-gradient(45deg, #2c2c2c, #1a1a1a);
+  }
+  
